@@ -1,1 +1,37 @@
-hello world
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>为 HTML 添加新元素</title>
+<!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+</head>
+<body>
+	<table border="10">
+		<tr>
+			<td align="center" colspan="2">公司</td>
+		</tr>
+		<tr>
+			<td align="center" rowspan="2">名字</td>
+			<td align="center">百度</td>
+		</tr>
+		<tr>
+			<td align="center" colspan="2">百度</td>
+		</tr>
+		<table></table>
+	</table>
+
+</body>
+<script type="text/javascript">
+	function add(a=0){
+		function add2(b=0){
+			a+=b;
+			return add2;
+		}
+		add2.toString=function(){return a;}
+		return add2;
+	}
+	console.log(add(1)(2)());
+</script>
+</html>
